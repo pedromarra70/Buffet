@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de buffet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="home">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="qm_somos.html">Quem somos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="apresentacao">
+        <h1>A&P Festas</h1>
+        <p>Contribuindo com a organizacao e fluidez do seu evento!</p>
+
+
+        <div class="slider">
+           
+            <div class="slides">
+                 <!--radio buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+                <input type="radio" name="radio-btn" id="radio8">
+                <!--fim radio buttons-->
+
+                <!--slide imagens-->
+                <div class="slide first">
+                    <img src="imgs/casamento.jpg" alt="imagem1">
+                </div>
+                <div class="slide">
+                    <img src="imgs/aniversario.jpg" alt="imagem2">
+                </div>
+                <div class="slide">
+                    <img src="imgs/anonovo.jpg" alt="imagem3">
+                </div>
+                <div class="slide">
+                    <img src="imgs/bebe.jpg" alt="imagem4">
+                </div>
+                <div class="slide">
+                    <img src="imgs/comidas.jpg" alt="imagem5">
+                </div>
+                <div class="slide">
+                    <img src="imgs/natal.jpg" alt="imagem6">
+                </div>
+                <div class="slide">
+                    <img src="imgs/drinks.jpg" alt="imagem7">
+                </div>
+                <div class="slide">
+                    <img src="imgs/entradas.jpg" alt="imagem8">
+                </div>
+                <!--fim slides imagens-->
+            
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+                <div class="auto-btn8"></div>
+            </div>
+
+            </div>
+
+
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+            </div>
+        </div>
+
+        <p>A A&P festas chegou para inovar o marcado de buffets e producao de festas, contando com a disponibilidade de decoracoes, doces, drinks, servico de de buffet...<br>Faca ja seu orcamento em apenas 15 minutos, clicando no botao abaixo.</p>
+    </div>
+
+    <div class="orcamento">
+        <div class="botao-orc" onclick="orc()" id="btn-orc">
+           <span>Faca seu orcamento!</span>
+        </div>
+
+        <div id="option">
+
+            <h3 id="h3">Orcamento</h3>
+            <h5 class="h5"></h5>
+            <h1 id="logo"></h1>
+            
+
+            <form onsubmit="env_form(event)" id="form" >
+                <div class="campo">
+
+                    <h5 id="h5-orc">complete as informacoes abaixo</h5>
+
+                    <label for="tp-festa"><strong>Tipo de evento*</strong></label><br>
+                    <select name="tp-festa" id="tp-festa" required>
+                        <option selected disabled value="">selecione</option>
+                        <option value="casamento/Noivado" id="op_cas">Casamento/noivado</option>
+                        <option value="confraternizacao" id="op_con">confraternizacao</option>
+                        <option value="cha revelacao" id="op_cha">cha revelacao</option>
+                        <option value="festa de fim de ano" id="op_fim">festa de fim de ano</option>
+                        <option value="evento corporativo" id="op_cor">evento corporativo</option>
+                    </select> <br>
+                </div>
+                    
+                <div class="campo">
+                    <label for="qtde"><strong>Quantidade de convidados*</strong></label> <br>
+                    <input type="number" name="qtde" id="qtde" min="10" max="300" required> <br>
+                </div>
+
+                <div class="campo">
+                    <label for="bebida"><strong>Deseja incluir bebida alcoolica*</strong></label> <br>
+                    <select name="bebida" id="bebida" required>
+                        <option selected disabled value="">selecione</option>
+                        <option value="nao" id="b_nao">Nao</option>
+                        <option value="sim" id="b_sim">sim</option>
+                    </select> <br>
+                </div>
+
+                    <div class="campo">
+                    <label for="decorcao"><strong>Decoracao da festa*</strong></label> <br>
+                    <select name="decoracao" id="decoracao" required>
+                        <option selected disabled value="">selecione</option>
+                        <option value="Incluir decoracao" id="d_sim">incluir decoracao</option>
+                        <option value="Nao incluir decoracao" id="d_nao">Nao incluir decoracao</option>
+                    </select> <br>
+                </div>
+
+                <div class="campo">
+                    <label for="particularidades"><strong>Sua festa possui alguma particularidade?</strong></label> <br>
+                    <textarea name="particularidades" id="particularidades" cols="30" rows="6"></textarea> <br>
+                </div>
+
+
+                
+                <div class="campo">
+
+                    <h5>Informacoes para contato</h5>
+
+                    <label for="nome"><strong>Nome*</strong></label> <br>
+                    <input type="text" name="nome" id="nome" required> <br>
+                </div>
+
+                <div class="campo">
+                    <label for="email" required"><strong>Email*</strong></label> <br>
+                    <input type="email" id="email" name="email"> <br>
+                    
+                </div>
+
+                <div class="campo">
+                    <label for="telefone" required><strong>Numero de telefone*</strong></label> <br>
+                    <input type="tel" name="telefone" id="telefone" required placeholder="(xx) xxxxx-xxxx"
+                    required> <br>
+               
+
+                    <input type="submit" id="envio" name="envio" value="Enviar">
+                 </div>
+
+            </form>
+
+            <div class="orc-final" id="pg-orc">
+                <div id="v_orc">
+
+                    <div class="text">
+                        <h5 id="p_orc"></h5>
+                        <p id="detalhe"></p>
+                    </div>
+
+
+
+                </div>
+
+
+                <h1>A&P Festas</h1>
+
+                <div class="orc-final">
+                    <span id="img-final"></span>
+                </div>
+
+                <div class="btns">
+                    <input type="button" value="PDF do orcamento detalhado" class="btn-imp" onclick="window.print()">
+                    <input type="button" value="Finalizar" class="btn_imp" onclick="finalizar()">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
